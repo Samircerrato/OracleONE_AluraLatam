@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular puntos</title>
+</head>
+<body>
+    <h1>Programa para calcular puntos de un equipo de Fulboll</h1>
+
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+        // para recoger los datos del usuario
+        var nombre = prompt("¿Cual es el nombre de su equipo?");
+
+        var victorias = parseInt(prompt("informe la cantidad de Victorias de este año"));
+
+        var empatas = parseInt(prompt("informe la cantidad de empatas de este año"));
+
+        var puntosAnhoAnterior = parseInt(prompt("informe la cantidad de puntos obtenidos el año pasado"));
+
+
+        //calcula un resultado
+        var puntosTotal = (victorias * 3) + empatas; 
+
+
+        //Imprime el resultado de este año en pantalla
+        imprimir("El total de puntos del quipo " + nombre + " este año fueron: " + puntosTotal);
+
+        
+        // hace una comparacion si el volor es true imprimira un comentario en la pantalla
+        if (puntosTotal > puntosAnhoAnterior) {        
+
+        imprimir("El quipo esta mejor que el año pasado octuvo " + (puntosTotal - puntosAnhoAnterior) + " puntos mas este año.");
+
+        }
+
+        if (puntosTotal == puntosAnhoAnterior) {
+
+        imprimir("El quipo esta igual que el año pasado, actuvo la misma cantidad de puntos");
+
+        }
+
+        if (puntosTotal < puntosAnhoAnterior) {
+
+        imprimir("El quipo esta peor que el año pasado, quedo " + (puntosAnhoAnterior - puntosTotal) + " puntos por debajo que año anterior");
+        
+        }
+
+    </script>
+</body>
+</html>

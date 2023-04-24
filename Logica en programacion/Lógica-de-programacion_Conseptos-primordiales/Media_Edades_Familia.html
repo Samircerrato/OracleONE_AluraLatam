@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media de edad</title>
+</head>
+<body>
+    <h1>Calculo de la media de edades de tu familia</h1>
+
+    <script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+   
+    function botonIntentar() {
+        let refresh = document.getElementById('refresh');
+        refresh.addEventListener('click', _ => {
+            location.reload();
+            }
+        );
+    }
+
+    var nombrePersonal = prompt("!Hola¡ me Regalas tu nombre antes de comensar");
+
+    var nombreUsuario = ("<h3>" + "!Hola¡ "+ nombrePersonal + " Un gusto" + "</h3>")
+
+    var siNo = prompt(nombrePersonal + " te gustaria saber el promedio de edad de tu familia escribe | si | para continuar");
+
+
+
+ 
+    if(siNo == "si") {
+            var numeroMiembros = parseInt(prompt(nombrePersonal + " ingrese la cantidad de miembros de su familia"));
+            var contador = 1;
+            var totalEdades = 0;
+
+            while (contador <= numeroMiembros) {
+            var edad = parseInt(prompt("Ingrese la edad del familiar " + contador));
+            totalEdades = totalEdades + edad;
+            contador++;
+            }
+
+            var mediaEdades = Math.round(totalEdades / numeroMiembros);
+    
+            imprimir(nombreUsuario)
+            imprimir("Los mienbros de su familia suman " + totalEdades + " años de edad")
+            imprimir(" La media de las edades de su familia es: " + mediaEdades);
+            botonIntentar()
+        }
+
+        else { 
+            imprimir("Bueno " + nombrePersonal + " sera otro dia");
+        }
+    </script>
+
+<button id="refresh">Quiero intentar de Nuevo<script>botonIntentar()</script></button>
+</body>
+</html> 

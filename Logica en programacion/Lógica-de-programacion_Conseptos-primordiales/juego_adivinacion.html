@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adivina</title>
+</head>
+<body>
+    <h1>Juego adivina el numero</h1>
+
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        var numeroSistema = Math.round(Math.random()*10);
+        var intentos = 5;
+        var contador = 1;
+
+        while (contador <= intentos) {
+            
+            var numeroLanzado = parseInt(prompt("Ingrese un numero entre | 1 á 10 |" + " tienes " + intentos + " disponibles."));
+            
+            if(numeroSistema == numeroLanzado) {
+
+            alert("Usted aserto, en el intento " + contador + " el numero pensado era: " + numeroSistema);
+            contador++
+
+            break;
+
+            }
+
+            else {
+                alert("Ese no era el numero oculto")
+            }
+
+            contador++
+        }
+
+        if(numeroSistema == numeroLanzado) {
+        imprimir("Usted aserto, en menos de " + contador +  " intentos, el numero pensado era: " + numeroSistema);        
+        }
+        
+        else {
+            imprimir("Usted utilizo los " + intentos + " intentos disponibles el numero pensado era: " + numeroSistema)
+        }
+        
+        imprimir("fin")
+
+    </script>
+</body>
+</html>

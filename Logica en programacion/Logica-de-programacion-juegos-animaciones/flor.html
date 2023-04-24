@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="600" height="1000"></canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0, 0, 600, 1000);
+
+    function dibujarCirculo(x, y, radio, color) {
+
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2*3.14);
+        pincel.fill();
+    }
+    
+
+    // dibujarCirculo(300,200,50,"red");
+    // dibujarCirculo(300,100,50,"yellow");
+    // dibujarCirculo(365,275,50,"green");
+    // dibujarCirculo(400,200,50,"black");
+    // dibujarCirculo(365,125,50,"grey");
+    // dibujarCirculo(200,200,50,"orange");
+    // dibujarCirculo(235,125,50,"grey");
+    // dibujarCirculo(300,300,50,"blue");
+    // dibujarCirculo(225,265,50,"yellow");
+
+
+    function dibujarFlor(x,y) {
+    dibujarCirculo(x, y, 50, "red");
+    dibujarCirculo(x, y+100, 50, "blue");
+    dibujarCirculo(x-65, y+75, 50, "green");
+    dibujarCirculo(x, y-100, 50, "yellow");
+    dibujarCirculo(x-65, y-75, 50, "grey");
+    dibujarCirculo(x-100, y, 50, "orange");
+    dibujarCirculo(x+65, y+75, 50, "tomato");
+    dibujarCirculo(x+100, y, 50, "black");
+    dibujarCirculo(x+65, y-75, 50, "purple");
+
+    }
+   dibujarFlor(300,200);
+   dibujarFlor(300,600)
+
+
+
+</script>
+
+
+</body>
+</html>

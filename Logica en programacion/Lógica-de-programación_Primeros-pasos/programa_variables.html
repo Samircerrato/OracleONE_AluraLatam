@@ -1,0 +1,127 @@
+<meta charset="UTF-8">
+
+Juan nacio en el año...
+2003
+<br>
+Pedro nacio en el año...
+1998
+<br>
+Pedro nacio en el año...
+2008
+<br>
+<br>
+<br>
+<br>
+<h1>Programa</h1>
+
+<script>
+    
+    var anho = 2025
+
+    document.write("Juan tiene: " + (anho-2000) + "años");
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Juan tiene: " + (anho-1995) + "años");
+    document.write("<br>");
+    document.write("<br>");
+
+    anho = 2030
+    
+    document.write("Juan tiene: " + (anho-2005) + "años");
+    document.write("<br>");
+    document.write("<br>");
+    
+    anho = 2020
+    
+    document.write("Jimena tiene: " + (anho-2010) + "años");
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Paola tiene: " + (anho-1995) + "años");
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Laura tiene: " + (anho-2005) + "años");
+    document.write("<br>");
+    document.write("<br>");
+    
+    document.write("El promedio de las edades de las tres mujeres es: " + ((10+25+15)/3) + " años" + "<br>" + "<br>");
+    
+    promedio = ((10+25+15)/3)
+    
+    document.write("El promedio de las edades de las tres mujeres es: " + Math.round(promedio) + " años" + "<br>" + "<br>");
+    
+    var edadPaola = 25;
+    var edadGimena = 10;
+    var edadLaura = 15;
+    
+    promedio = (edadGimena + edadPaola + edadLaura)/3
+    
+    document.write("El promedio de las edades de las tres mujeres es: " + Math.round(promedio) + " años");
+</script>
+
+<br>
+<br>
+
+
+<!-- este seria el codigo ideal -->
+<Script>
+    var edadPaola = 25;
+    var edadGimena = 10;
+    var edadLaura = 15;
+    
+    var nombre1 = "Jimena"; 
+    var nombre2 = "Paola";
+    var nombre3 = "Laura";
+    
+    promedio = (edadGimena + edadPaola + edadLaura)/3
+    
+    document.write("El promedio de las edades de " + nombre1 + ", " + nombre2 + " y "+ nombre3+ " es " + Math.round(promedio) + " años" + "<br>" + "<br>");
+</Script>
+
+<meta charset="UTF-8">
+
+<h3>Tabla de Multiplicar.</h3>
+<br>
+<script>
+    var tM = 8;
+
+    document.write(tM + "x1= " + tM * 1 + "<br>");
+    document.write(tM + "x2= " + tM * 2 + "<br>");
+    document.write(tM + "x3= " + tM * 3 + "<br>");
+    document.write(tM + "x4= " + tM * 4 + "<br>");
+    document.write(tM + "x5= " + tM * 5 + "<br>");
+    document.write(tM + "x6= " + tM * 6 + "<br>");
+    document.write(tM + "x7= " + tM * 7 + "<br>");
+    document.write(tM + "x8= " + tM * 8 + "<br>");
+    document.write(tM + "x9= " + tM * 9 + "<br>");
+    document.write(tM + "x10= " + tM * 10 + "<br>");
+</script>
+
+<h1>Programa</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    };
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    
+    var anho = 2025
+    
+   // Este codigo calcula las edades de Juan, Pedro y Carlos
+
+    imprimir("Hola amigos");
+
+    imprimir("Jimena tiene: " + (anho-2010) + "años");
+    
+    imprimir("Paola tiene: " + (anho-1995) + "años");
+    
+    anho = 2030
+    
+    imprimir("Laura tiene: " + (anho-2005) + "años");
+</script>
+

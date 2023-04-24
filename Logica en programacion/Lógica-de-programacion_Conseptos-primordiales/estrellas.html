@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media de edad</title>
+</head>
+<body>
+    <h1>Calculo de la media de edades de tu familia</h1>
+
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<hr>");
+            document.write("<br>");
+        }
+    
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+    
+       
+        function botonIntentar() {
+            let refresh = document.getElementById('refresh');
+            refresh.addEventListener('click', _ => {
+                location.reload();
+                }
+            );
+        }
+
+        var nombrePersonal = prompt("!Hola¡ me Regalas tu nombre antes de comensar");
+
+        var nombreUsuario = ("<h3>" + "!Hola¡ "+ nombrePersonal + " Un gusto" + "</h3>");
+
+        for(var lineas = 1; lineas <= 3; lineas++ ) {
+
+            for(var columnas =1; columnas <= 10; columnas++) {
+
+            document.write("*");
+
+            }
+
+            saltarLinea();
+        }
+        
+        imprimir("fin");
+
+    </script>
+
+<button id="refresh">Quiero intentar de Nuevo<script>botonIntentar()</script></button>
+</body>
+</html> 

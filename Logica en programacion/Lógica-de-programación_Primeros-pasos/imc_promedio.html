@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imc promedio</title>
+</head>
+<body>
+
+    <H1>
+        Programa para Calculo del promedio de IMC
+    </H1>
+
+    <script>
+        function saltarLinea() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+
+            document.write(frase);
+            saltarLinea();
+        }1
+
+
+
+        // function calcularImc(peso1,altura1,nombre1,peso2,altura2,nombre2){
+        //     imc1 = peso1 / (altura1 * altura1);
+        //     imc2 = peso2 / (altura2 * altura2);
+        //     imprimir("El promedio del IMC de Calculado de " + nombre1 + " y " + nombre2 + "es: "  + (imc1 + imc2)/2);
+            
+        // };
+
+        // calcularImc(71,1.72,"Samir",75,1.73,"Felipe");
+        // calcularImc(56,1.59,"Julia",60,1.69,"Maryuri");
+        
+
+
+
+        // function calcularImc(peso,altura){
+        //     imc = peso / (altura * altura);
+        //     return (imc);
+        // };
+        
+        // var imcSamir = calcularImc(71,1.72);
+        
+        // var imcFelipe = calcularImc(75,1.73);
+
+        // imprimir("El promedio del IMC de Calculado de samir y felipe" + (imcFelipe + imcSamir)/2);
+
+
+
+
+
+
+
+        function calcularImc(peso,altura){
+            return (peso / (altura * altura));  
+        };
+
+        imprimir("El promedio del IMC calculado de Samir y Felipe es: " + (calcularImc(71,1.72) + calcularImc(75,1.73))/2);
+
+        imprimir("El promedio del IMC calculado de Julia y Maryuri es: " + (calcularImc(56,1.59) + calcularImc(60,1.69))/2);
+        </script>
+
+</body>
+</html>

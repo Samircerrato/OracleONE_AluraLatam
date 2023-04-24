@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular puntos</title>
+</head>
+<body>
+    
+
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+        //De forma predeterminada la variable prompt devuelve el valor del usuario en formato texto aunque sean numeros para evitar esto la contatenamos con la variable parseInt para convertir los datos a formato numero.
+        var victorias = parseInt(prompt("informe la cantidad de Victorias"));
+        var empatas = parseInt(prompt("informe la cantidad de empatas"));
+        var nombre = prompt("informe el nobre del equipo");// aqui no fue nesesario por que la respuesta del usuario sera texto
+
+        var puntosTotal = (victorias * 3) + empatas; 
+
+        imprimir("El total de puntos del quipo " + nombre + " es: " + puntosTotal);
+
+
+         //ejem:
+        // imprimir(("10"*2)) //multiplica
+        // imprimir(("10"+20)) // contatena
+
+    </script>
+</body>
+</html>
